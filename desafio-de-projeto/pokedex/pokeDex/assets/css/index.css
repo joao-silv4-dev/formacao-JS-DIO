@@ -1,0 +1,122 @@
+.normal { background-color: #A8A77A; }
+.fire { background-color: #EE8130; }
+.water { background-color: #6390F0; }
+.electric { background-color: #F7D02C; }
+.grass { background-color: #7AC74C; }
+.ice { background-color: #96D9D6; }
+.fighting { background-color: #C22E28; }
+.poison { background-color: #A33EA1; }
+.ground { background-color: #E2BF65; }
+.flying { background-color: #A98FF3; }
+.psychic { background-color: #F95587; }
+.bug { background-color: #A6B91A; }
+.rock { background-color: #B6A136; }
+.ghost { background-color: #705746; }
+.dragon { background-color: #6F35FC; }
+.dark { background-color: #705746; }
+.steel { background-color: #B7B7CE; }
+.fairy { background-color: #D685AD; }
+
+
+.cardsPokemons {
+    height: auto;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    max-width: 400px;
+
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+
+    overflow: hidden;
+}
+
+.cardLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.namePokemon {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.skillsDiv {
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.skill {
+    filter: brightness(1.2);
+    opacity: 0.8;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    margin: 10px;
+}
+
+.cardRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.imgPokemon {
+    object-fit: cover;
+    height: 70%;
+    width: 70%;
+}
+
+.numberPokemon {
+    opacity: 0.3;
+}
+
+.pageControlBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw;
+}
+
+.pageControlBtns button {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    transition: filter 1s;
+}
+
+.pageControlBtns button:hover { cursor: pointer; filter: brightness(1.1); }
+.btnBackPage { background: rgb(162, 73, 73); }
+.btnNextPage { background-color: rgb(106, 162, 73); }
+
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+    .cardsPokemons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cardsPokemons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
