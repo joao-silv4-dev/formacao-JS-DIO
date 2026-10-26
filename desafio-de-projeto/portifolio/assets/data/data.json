@@ -1,0 +1,7 @@
+{
+    "profilePhotoPath": "./assets/img/profilePhoto.png",
+    "nome": "João Gabriel Delmiro da Silva",
+    "idade": "17",
+    "formacoes": ["HTML", "CSS", "JavaScript", "Java"],
+    "tecnologias": ["tech1"]
+}

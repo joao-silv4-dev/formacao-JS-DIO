@@ -1,24 +1,4 @@
 let pokeAPIURL = "https://pokeapi.co/api/v2/pokemon?limit=5&offset=0";
-let limit =  9;
-let offset =  0;
-
-/*
-<div class="card">
-    <div class="cardLeft">
-        <span class="namePokemon">
-            Bulbasaur
-        </span>
-        <div class="skillsDiv">
-            <span class="skill">grass</span>
-            <span class="skill">poison</span>
-        </div>
-    </div>
-    <div class="cardRight">
-        <span class="numberPokemon">#001</span>
-        <img src="" alt="" class="imgPokemon">
-    </div>
-</div>
-*/
 
 function addPokemonViaURL(pokemon){
     fetch(pokemon.url)
@@ -72,23 +52,3 @@ function carregarPaginaPokemon(limit, offset){
         .catch(e => console.log(e))
     
 }
-
-function proximaPagina(){
-    offset += 5;
-    carregarPaginaPokemon(limit, offset)
-}
-
-function backPagina(){
-    if ( !((offset-5) < 0) ) {
-        offset -= 5;
-        carregarPaginaPokemon(limit,offset)
-    } else {
-        console.log("É a primeira página!")
-    }
-}
-
-document.querySelector(".btnBackPage").addEventListener("click", backPagina)
-document.querySelector(".btnNextPage").addEventListener("click", proximaPagina)
-
-
-carregarPaginaPokemon(limit, offset)
